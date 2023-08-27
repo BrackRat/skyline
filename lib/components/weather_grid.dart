@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ming_cute_icons/ming_cute_icons.dart';
 import 'weather_item.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class WeatherGrid extends StatefulWidget {
   final Map<String, dynamic>? data;
@@ -14,6 +15,15 @@ class _WeatherGridState extends State<WeatherGrid> {
   @override
   Widget build(BuildContext context) {
     final data = widget.data;
+
+    void showToast(String msg) {
+      Fluttertoast.showToast(
+          msg: msg,
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          fontSize: 16.0);
+    }
 
     return GridView.count(
       shrinkWrap: true,
@@ -30,6 +40,7 @@ class _WeatherGridState extends State<WeatherGrid> {
               desc: "C",
               progress: 0.3,
               isBold: true,
+              onTapFn: () => showToast("温度"),
               lastUpdatedTime: "3分钟前"),
         ),
         WeatherItem(
@@ -39,6 +50,7 @@ class _WeatherGridState extends State<WeatherGrid> {
               data: "${data!['data']['air_quality']}",
               desc: "AQI",
               progress: 0.2,
+              onTapFn: () => showToast("空气质量"),
               lastUpdatedTime: "3分钟前"),
         ),
         WeatherItem(

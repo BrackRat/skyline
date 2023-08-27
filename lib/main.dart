@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ming_cute_icons/ming_cute_icons.dart';
+
 import './themes/demo_blue.dart';
 import './pages/home_page.dart';
+import './pages/tools_page.dart';
+import './pages/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +38,29 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var _selectedTab = _SelectedTab.home;
+
+  void _handleIndexChanged(int i) {
+    setState(() {
+      _selectedTab = _SelectedTab.values[i];
+    });
+  }
+
+  Widget _getPage() {
+    switch (_selectedTab) {
+      case _SelectedTab.home:
+        return HomePage();
+      case _SelectedTab.tools:
+        return ToolsPage();
+      case _SelectedTab.profile:
+        return ProfilePage();
+    }
+  }
+
+//   MingCuteIcons.mgc_home_3_line
+// MingCuteIcons.mgc_compass_line
+// MingCuteIcons.mgc_user_2_line
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,9 +68,32 @@ class _MyHomePageState extends State<MyHomePage> {
       //   title: Text(widget.title),
       //   backgroundColor: colorBackground,
       // ),
-      body: HomePage(),
-      bottomNavigationBar: Text("bottom"),
-
+      body: IndexedStack(
+        index: _selectedTab.index,
+        children: const [
+          HomePage(),
+          ToolsPage(),
+          ProfilePage(),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedTab.index,
+        onTap: _handleIndexChanged,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(MingCuteIcons.mgc_home_3_line),
+              activeIcon: Icon(MingCuteIcons.mgc_home_3_fill),
+              label: "首页"),
+          BottomNavigationBarItem(
+              icon: Icon(MingCuteIcons.mgc_compass_line),
+              activeIcon: Icon(MingCuteIcons.mgc_compass_fill),
+              label: "工具"),
+          BottomNavigationBarItem(
+              icon: Icon(MingCuteIcons.mgc_user_2_line),
+              activeIcon: Icon(MingCuteIcons.mgc_user_2_fill),
+              label: "我"),
+        ],
+      ),
       // floatingActionButton: FloatingActionButton(
       //   onPressed: _getStatus,
       //   child: Icon(Icons.refresh),
@@ -51,3 +101,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+enum _SelectedTab { home, tools, profile }

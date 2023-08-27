@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   ming_cute_icons: ^0.0.1
   dio: ^5.3.2
+  animated_bottom_navigation_bar: ^1.2.0
+  fluttertoast: ^8.2.2
 
 dev_dependencies:
   flutter_test:
