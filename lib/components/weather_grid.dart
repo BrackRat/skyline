@@ -34,7 +34,7 @@ class _WeatherGridState extends State<WeatherGrid> {
         ),
         WeatherItem(
           itemData: ItemData(
-              icon: MingCuteIcons.mgc_octagon_line,
+              icon: MingCuteIcons.mgc_cloud_line,
               title: "空气质量",
               data: "${data!['data']['air_quality']}",
               desc: "AQI",
@@ -51,7 +51,7 @@ class _WeatherGridState extends State<WeatherGrid> {
         ),
         WeatherItem(
           itemData: ItemData(
-              icon: MingCuteIcons.mgc_finger_press_line,
+              icon: MingCuteIcons.mgc_wind_line,
               title: "大气压",
               data: "${data!['data']['pressure']}",
               desc: "hPa",
@@ -59,18 +59,18 @@ class _WeatherGridState extends State<WeatherGrid> {
         ),
         WeatherItem(
           itemData: ItemData(
-              icon: MingCuteIcons.mgc_finger_press_line,
+              icon: MingCuteIcons.mgc_safe_alert_fill,
               title: "大气压",
               desc: "hPa",
-              // isBold: true,
+              isBold: true,
               lastUpdatedTime: "1分钟前"),
         ),
         WeatherItem(
           itemData: ItemData(
-              icon: MingCuteIcons.mgc_finger_press_line,
+              icon: MingCuteIcons.mgc_align_left_line,
               title: "大气压",
               desc: "hPa",
-              isBold: true,
+              // isBold: true,
               lastUpdatedTime: "1分钟前"),
         ),
       ],

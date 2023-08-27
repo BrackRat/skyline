@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import './model/sync_op.dart';
-import './components/weather_grid.dart';
 import './themes/demo_blue.dart';
+import './pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,44 +34,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Map<String, dynamic>? data;
-
-  @override
-  void initState() {
-    super.initState();
-    _getStatus();
-  }
-
-  void _getStatus() async {
-    setState(() {
-      data = null;
-    });
-    final result = await getSyncStatus();
-    setState(() {
-      data = result;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: colorBackground,
-      ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            child: data != null
-                ? Container(
-                    child: WeatherGrid(
-                      data: data,
-                    ),
-                  )
-                : Center(child: CircularProgressIndicator()),
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   title: Text(widget.title),
+      //   backgroundColor: colorBackground,
+      // ),
+      body: HomePage(),
+      bottomNavigationBar: Text("bottom"),
+
       // floatingActionButton: FloatingActionButton(
       //   onPressed: _getStatus,
       //   child: Icon(Icons.refresh),
