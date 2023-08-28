@@ -3,7 +3,6 @@ import 'package:skyline/themes/demo_blue.dart';
 import 'package:ming_cute_icons/ming_cute_icons.dart';
 
 class TimeTable extends StatelessWidget {
-
   const TimeTable({Key? key}) : super(key: key);
 
   @override
@@ -18,11 +17,12 @@ class TimeTable extends StatelessWidget {
           borderRadius: BorderRadius.circular(26),
         ),
         child: Container(
-          padding: EdgeInsets.all(12),
+          padding: EdgeInsets.fromLTRB(22, 23, 12, 23),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     "高等数学",

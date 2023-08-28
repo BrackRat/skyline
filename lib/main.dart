@@ -46,21 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  Widget _getPage() {
-    switch (_selectedTab) {
-      case _SelectedTab.home:
-        return HomePage();
-      case _SelectedTab.tools:
-        return ToolsPage();
-      case _SelectedTab.profile:
-        return ProfilePage();
-    }
-  }
-
-//   MingCuteIcons.mgc_home_3_line
-// MingCuteIcons.mgc_compass_line
-// MingCuteIcons.mgc_user_2_line
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
       body: IndexedStack(
         index: _selectedTab.index,
         children: const [
-          HomePage(),
+          HomePage(
+            username: "张飞",
+            welcomeText: "早上好!",
+          ),
           ToolsPage(),
           ProfilePage(),
         ],
