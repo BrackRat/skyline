@@ -27,7 +27,7 @@ class ToolsGrid extends StatelessWidget {
             ],
           ),
           Container(
-            height: (toolsWidgets.length / 2).ceil() * 160,
+            height: (toolsWidgets.length / 2).ceil() * 120,
             child: GridView.count(
               crossAxisCount: 2,
               childAspectRatio: 2.0,

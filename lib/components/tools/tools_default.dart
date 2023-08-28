@@ -12,10 +12,18 @@ List<ToolData> defaultTools = [
         icon: MingCuteIcons.mgc_youtube_line, title: "考试查询", desc: "上天保佑时间"),
     ToolItemData(
         icon: MingCuteIcons.mgc_youtube_line, title: "空闲教室", desc: "找个地方自习"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_youtube_line, title: "空间预约", desc: "预约空间"),
   ]),
   ToolData(header: "生活", items: [
-    ToolItemData(icon: MingCuteIcons.mgc_globe_line, title: "", desc: "生活1"),
-    ToolItemData(icon: MingCuteIcons.mgc_youtube_line, title: "", desc: "生活2"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_youtube_line, title: "缴费系统", desc: "交水电"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_youtube_line, title: "后勤报修", desc: "不要断水断网"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_youtube_line, title: "手机门户", desc: "请假专用()"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_youtube_line, title: "校园网查询", desc: "希望永不收费"),
   ]),
 ];
 
