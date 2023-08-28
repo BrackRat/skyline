@@ -71,7 +71,8 @@ class _WeatherGridState extends State<WeatherGrid> {
                   title: "大气压",
                   data: "${data!['data']['pressure']}",
                   desc: "hPa",
-                  lastUpdatedTime: "3分钟前"),
+                  lastUpdatedTime: "3分钟前",
+                  backgroundChildren: LineChart()),
             ),
             WeatherItem(
               itemData: ItemData(

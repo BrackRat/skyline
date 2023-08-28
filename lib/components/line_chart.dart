@@ -8,8 +8,8 @@ class LineChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
-      width: 200,
+      height: 160,
+      width: 180,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(28)),
       child: _buildDefaultAreaChart(),
     );
@@ -43,7 +43,7 @@ class LineChart extends StatelessWidget {
             end: Alignment.topCenter,
             colors: [
               const Color.fromRGBO(255, 255, 255, 0), // Middle color
-              colorPrimiary60, // End color
+              colorPrimiary30, // End color
             ],
           ),
           xValueMapper: (ChartSampleData sales, _) => sales.x as DateTime,
