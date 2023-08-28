@@ -24,6 +24,20 @@ List<ToolData> defaultTools = [
         icon: MingCuteIcons.mgc_chat_2_line, title: "移动门户", desc: "请假专用()"),
     ToolItemData(
         icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
+    ToolItemData(
+        icon: MingCuteIcons.mgc_wifi_line, title: "校园网查询", desc: "希望永不收费"),
   ]),
 ];
 

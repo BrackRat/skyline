@@ -41,11 +41,11 @@ class _HomePageState extends State<HomePage> {
               ],
             )),
         TimeTable(),
-        Expanded(
+        Flexible(
           child: FavComponents(onUpdate: () {
             setState(() {});
           }),
-        )
+        ),
       ],
     );
   }

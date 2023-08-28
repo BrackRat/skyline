@@ -54,15 +54,16 @@ class _FavComponentsState extends State<FavComponents> {
             ],
           ),
         ),
-        Expanded(
+        Flexible(
           child: data != null
               ? Container(
+                  padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
                   child: WeatherGrid(
                     data: data,
                   ),
                 )
               : Center(child: CircularProgressIndicator()),
-        )
+        ),
       ],
     );
   }

@@ -41,8 +41,8 @@ class WeatherItem extends StatelessWidget {
       },
       child: Container(
         padding: EdgeInsets.fromLTRB(15, 21, 15, 0),
-        width: 100,
-        height: 100,
+        width: 160,
+        height: 160,
         decoration: BoxDecoration(
           color: itemData.isBold ? colorPrimiary : colorSecondary,
           borderRadius: BorderRadius.circular(28),

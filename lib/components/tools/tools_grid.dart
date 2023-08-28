@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skyline/components/bottom_reminder.dart';
 import './tools_structure.dart';
 import 'package:skyline/themes/demo_blue.dart';
 
@@ -33,7 +34,7 @@ class ToolsGrid extends StatelessWidget {
                 spacing: 12,
                 runSpacing: 12,
                 children: toolsWidgets,
-              ))
+              )),
         ],
       ),
     );

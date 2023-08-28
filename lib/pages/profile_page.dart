@@ -19,13 +19,16 @@ class ProfilePage extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                  child: const Text('Avatar'),
-                ),
+                    margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    child: CircleAvatar(
+                      radius: 56, // 一半的宽度
+                      backgroundImage: NetworkImage(
+                          "https://th.bing.com/th/id/OIP.H2Hykprrq3rztwpWLsg2OwAAAA?pid=ImgDet&rs=1"),
+                    )),
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 12, 0, 0),
                   child: const Text(
-                    'Name',
+                    '张飞',
                     style: TextStyle(
                         color: colorWhite,
                         fontSize: 20,
