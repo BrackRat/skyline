@@ -8,10 +8,10 @@ class LineChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 180,
       width: 200,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(28)),
-      child: Expanded(child: _buildDefaultAreaChart()),
+      child: _buildDefaultAreaChart(),
     );
   }
 
@@ -36,8 +36,16 @@ class LineChart extends StatelessWidget {
       series: <AreaSeries<ChartSampleData, DateTime>>[
         AreaSeries<ChartSampleData, DateTime>(
           dataSource: chartData,
-          opacity: 1,
-          color: colorPrimiary30, // Set your desired color here
+          // opacity: 1,
+          // color: const Color.fromRGBO(255, 255, 255, 0), // Start color
+          gradient: LinearGradient(
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+            colors: [
+              const Color.fromRGBO(255, 255, 255, 0), // Middle color
+              colorPrimiary60, // End color
+            ],
+          ),
           xValueMapper: (ChartSampleData sales, _) => sales.x as DateTime,
           yValueMapper: (ChartSampleData sales, _) => sales.y,
         ),
