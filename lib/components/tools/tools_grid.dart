@@ -27,16 +27,13 @@ class ToolsGrid extends StatelessWidget {
             ],
           ),
           Container(
-            height: (toolsWidgets.length / 2).ceil() * 120,
-            child: GridView.count(
-              crossAxisCount: 2,
-              childAspectRatio: 2.0,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
-              padding: EdgeInsets.fromLTRB(0, 4, 0, 0),
-              children: toolsWidgets,
-            ),
-          )
+              padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+              child: Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                spacing: 12,
+                runSpacing: 12,
+                children: toolsWidgets,
+              ))
         ],
       ),
     );

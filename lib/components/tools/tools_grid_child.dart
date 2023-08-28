@@ -11,11 +11,11 @@ class ToolsGridChild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 160,
-      width: 80,
+      height: 80,
+      width: 160,
       decoration: BoxDecoration(
         color: colorSecondary,
-        borderRadius: BorderRadius.circular(28),
+        borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -24,7 +24,7 @@ class ToolsGridChild extends StatelessWidget {
             padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
             child: Icon(
               toolItemData.icon,
-              size: 32,
+              size: 40,
               color: colorPrimiary,
             ),
           ),
