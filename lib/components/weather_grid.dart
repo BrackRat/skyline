@@ -3,6 +3,7 @@ import 'package:ming_cute_icons/ming_cute_icons.dart';
 import 'weather_item.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../components/bottom_reminder.dart';
+import '../components/line_chart.dart';
 
 class WeatherGrid extends StatefulWidget {
   final Map<String, dynamic>? data;
@@ -35,14 +36,15 @@ class _WeatherGridState extends State<WeatherGrid> {
           children: [
             WeatherItem(
               itemData: ItemData(
-                  icon: MingCuteIcons.mgc_thermometer_line,
-                  title: "温度",
-                  data: "${data!['data']['temperature']}",
-                  desc: "C",
-                  progress: 0.3,
-                  isBold: true,
-                  onTapFn: () => showToast("温度"),
-                  lastUpdatedTime: "3分钟前"),
+                icon: MingCuteIcons.mgc_thermometer_line,
+                title: "温度",
+                data: "${data!['data']['temperature']}",
+                desc: "C",
+                progress: 0.3,
+                isBold: true,
+                onTapFn: () => showToast("温度"),
+                lastUpdatedTime: "3分钟前",
+              ),
             ),
             WeatherItem(
               itemData: ItemData(
@@ -60,7 +62,8 @@ class _WeatherGridState extends State<WeatherGrid> {
                   title: "湿度",
                   data: "${data!['data']['humidity']}",
                   desc: "%",
-                  lastUpdatedTime: "3分钟前"),
+                  lastUpdatedTime: "3分钟前",
+                  backgroundChildren: LineChart()),
             ),
             WeatherItem(
               itemData: ItemData(
