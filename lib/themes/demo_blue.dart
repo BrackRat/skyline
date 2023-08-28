@@ -17,3 +17,5 @@ const colorWhite80 = Color.fromRGBO(255, 255, 255, 0.6);
 
 const colorBlack60 = Color.fromRGBO(0, 0, 0, 0.6);
 const colorBlack30 = Color.fromRGBO(0, 0, 0, 0.3);
+
+const colorBlack = Color.fromRGBO(0, 0, 0, 1);

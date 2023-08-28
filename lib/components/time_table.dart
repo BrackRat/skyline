@@ -27,7 +27,7 @@ class TimeTable extends StatelessWidget {
                   Text(
                     "高等数学",
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                         color: colorPrimiary),
                   ),

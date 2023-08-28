@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ming_cute_icons/ming_cute_icons.dart';
 import '../themes/demo_blue.dart';
 
+
 class ItemData {
   final IconData icon;
   final String title;
@@ -40,7 +41,7 @@ class WeatherItem extends StatelessWidget {
         itemData.onTapFn != null ? itemData.onTapFn!() : null;
       },
       child: Container(
-        padding: EdgeInsets.fromLTRB(15, 21, 15, 0),
+        padding: const EdgeInsets.fromLTRB(15, 21, 15, 0),
         width: 160,
         height: 160,
         decoration: BoxDecoration(
@@ -67,12 +68,12 @@ class WeatherItem extends StatelessWidget {
                         color: itemData.isBold ? colorWhite : colorPrimiary,
                         size: 16,
                       )
-                    : SizedBox(width: 0.0, height: 0.0)
+                    : const SizedBox(width: 0.0, height: 0.0)
               ],
             ),
             // 大图标和数据
             Container(
-              padding: EdgeInsets.fromLTRB(2, 16, 2, 0),
+              padding: const EdgeInsets.fromLTRB(2, 16, 2, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -120,7 +121,7 @@ class WeatherItem extends StatelessWidget {
             // ),
             // 进度条与上次更新
             Container(
-              padding: EdgeInsets.fromLTRB(0, 14, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 14, 0, 0),
               child: Column(
                 children: <Widget>[
                   itemData.progress != -1.0
@@ -130,10 +131,11 @@ class WeatherItem extends StatelessWidget {
                           backgroundColor:
                               itemData.isBold ? colorWhiheBG : colorWhite80,
                           color: itemData.isBold ? colorWhite : colorPrimiary,
-                          borderRadius: BorderRadius.all(Radius.circular(8)))
-                      : SizedBox(width: 0.0, height: 0.0),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(8)))
+                      : const SizedBox(width: 0.0, height: 0.0),
                   Container(
-                    padding: EdgeInsets.fromLTRB(0, 6, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(0, 6, 0, 0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
