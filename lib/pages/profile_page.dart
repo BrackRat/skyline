@@ -67,7 +67,7 @@ class ProfilePage extends StatelessWidget {
             Container(
                 // padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                 decoration: BoxDecoration(
-                  color: colorSecondary,
+                  color: colorSettingBG,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -92,7 +92,7 @@ class ProfilePage extends StatelessWidget {
             Container(
                 // padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                 decoration: BoxDecoration(
-                  color: colorSecondary,
+                  color: colorSettingBG,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -111,7 +111,28 @@ class ProfilePage extends StatelessWidget {
                         icon: MingCuteIcons.mgc_information_line, text: "关于"),
                     SizedBox(width: 0.0, height: 12.0),
                   ],
-                ))
+                )),
+            const SizedBox(width: 0.0, height: 25.0),
+            Container(
+              decoration: BoxDecoration(
+                color: colorSettingBG,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.fromLTRB(0, 12, 0, 12),
+                      alignment: Alignment.center,
+                      child: const Text(
+                        '退出登录',
+                        style: TextStyle(color: colorWarning, fontSize: 16),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ));
   }

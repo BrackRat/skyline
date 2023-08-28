@@ -20,6 +20,7 @@ class SettingItem extends StatelessWidget {
             padding: const EdgeInsets.only(left: 18),
             child: Icon(
               icon,
+              color: colorPrimiary,
               size: 24,
             ),
           ),
@@ -33,6 +34,7 @@ class SettingItem extends StatelessWidget {
             padding: EdgeInsets.only(right: 12),
             child: Icon(
               MingCuteIcons.mgc_right_line,
+              color: colorPrimiary,
               size: 24,
             ),
           )
